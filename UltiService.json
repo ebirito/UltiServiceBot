@@ -1,0 +1,851 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "UltiService",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "CheckW2PrintJobStatus"
+    },
+    {
+      "name": "DeleteEmployee"
+    },
+    {
+      "name": "Farewell"
+    },
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "Help"
+    },
+    {
+      "name": "Identification"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "TransferToRepresentative"
+    }
+  ],
+  "entities": [
+    {
+      "name": "AccountNumber"
+    },
+    {
+      "name": "EmployeeName"
+    },
+    {
+      "name": "UserCompany"
+    },
+    {
+      "name": "UserName"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [],
+  "actions": [
+    {
+      "actionName": "DeleteEmployee",
+      "intentName": "DeleteEmployee",
+      "actionParameters": [
+        {
+          "parameterName": "EmployeeName",
+          "entityName": "EmployeeName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "actionName": "Identification",
+      "intentName": "Identification",
+      "actionParameters": [
+        {
+          "parameterName": "name",
+          "entityName": "UserName",
+          "required": true
+        },
+        {
+          "parameterName": "accountNumber",
+          "entityName": "AccountNumber",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "i need help deleting someone form the system",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "whats up",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "can you please delete someone on the back office",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "i would like to delete an employee",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "how is it going",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "yo",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "can you please delete an employee for me",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "i need an employee deleted from the back end",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "howdy",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "how are you",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "i want to delete an employee",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "i need help deleting an employee",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "can you delete someone in the backend for me",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "help me",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "what can you help me with?",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i'm confused",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i'm lost",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "this is not what i expected",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "can you please give me some options",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "what are my options",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "can you please transfer me to a representative?",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "transfer me to a human",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "i'd like to speak to a human",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "can i speak to your manager?",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "i'd prefer to talk to someone else",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "can you connect me to a human please?",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "can you transfer me to customer service please?",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "hi, my name is abraham lapscher and i'm from google",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 5,
+          "endPos": 6
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 12,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "my name is john snow and i work at tesla motors",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 4
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 9,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "this is julia from outback steakhouse",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "hi, i'm calling from microsoft, this is james franco speaking",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "this is mary smith calling on behalf of yahoo",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 2,
+          "endPos": 3
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "my name is abe lapscher and my account number is 10239",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 10,
+          "endPos": 10
+        },
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "my number is 1827 and my name is kim misrahi",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "UserName",
+          "startPos": 8,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "this is jessica day calling with account 3974",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 7,
+          "endPos": 7
+        },
+        {
+          "entity": "UserName",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "nick miller speaking, and my account is 10233",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 8,
+          "endPos": 8
+        },
+        {
+          "entity": "UserName",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "account # 234, this is barbara bush",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "UserName",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "my id is 8223 and my name is toby",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "UserName",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "can you please delete employee aaron kane from the system",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "please remove marsha williams from ultipro",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i need to delete joe lopez from the system",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "can you help me by deleting mario gonzalez from ultipro?",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "can you please delete nancy jones",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "hi, this is steven thompson from aetna",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "can i speak to a human instead",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "i want to delet an employee",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "hi my name is abe and my account# is 2033",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 10,
+          "endPos": 10
+        },
+        {
+          "entity": "UserName",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "my name is abraham and my account number is 2634",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 9,
+          "endPos": 9
+        },
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "id like to speak to a human",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "please delete abraham lapscher",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "hi, this is abraham lapscher from google",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "hits is mary smith calling on behalf of yahoo",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 2,
+          "endPos": 3
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "my name is abraham lapscher",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "yo. whats up",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi, this is abraham lapscher from yahoo",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "UserCompany",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i need to delete abraham lapscher form the system",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "hi my name is abe",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "my name is abraham lapscher and my account number is 3864",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 10,
+          "endPos": 10
+        },
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what is the status of my w2 print job?",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "when will i get my printed w2s",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "have my w2s already been printed?",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "whats the status of my w2 forms?",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "can i get the status of my tax form printing job?",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "when are we getting our w2s",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "i want to delete abraham lapscher from the system",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i want to delete an employee from the system",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "i need to remove an employee from the system",
+      "intent": "DeleteEmployee",
+      "entities": []
+    },
+    {
+      "text": "this is abe",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "my name is abraham lapscher and my account number is 3645",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 10,
+          "endPos": 10
+        },
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "can you transfer me to a customer representative?",
+      "intent": "TransferToRepresentative",
+      "entities": []
+    },
+    {
+      "text": "help me please",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i want to delete cam newton from ultipro",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i need to delete aaron cohen from the system",
+      "intent": "DeleteEmployee",
+      "entities": [
+        {
+          "entity": "EmployeeName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "this is nancy pelosi and my number is 20384",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "AccountNumber",
+          "startPos": 8,
+          "endPos": 8
+        },
+        {
+          "entity": "UserName",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "guide me please",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "can i check on my w2 print job please?",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "can i check on my w2 print job please?",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "no that will be all",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "no thats it",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "nothing thank you",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "im done thanks",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "i think thats all for now",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "nope",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "nothing at all",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "my name is joe jonas",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i need to check the status of my w2s",
+      "intent": "CheckW2PrintJobStatus",
+      "entities": []
+    },
+    {
+      "text": "its mark cuban",
+      "intent": "Identification",
+      "entities": [
+        {
+          "entity": "UserName",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "nothing",
+      "intent": "Farewell",
+      "entities": []
+    },
+    {
+      "text": "nope thats it",
+      "intent": "Farewell",
+      "entities": []
+    }
+  ]
+}
